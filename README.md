@@ -19,6 +19,6 @@ npm run build --report
 ```
 
 # demo
-https://github.com/greysalt/cart_vue/dist/index.html
+[entery](https://greysalt.github.io/cart_vue/dist/index.html)
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
