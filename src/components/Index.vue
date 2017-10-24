@@ -90,36 +90,36 @@ export default {
 <style>
 
 	.btn-addToCart{
-		background: #4984ef;
-		color: #fff;
+		background: #4984ef !important;
+		color: #fff !important;
 	}
 	.btn-addToCart:hover{
-		background: #316fe0;
-		color: #fff;
+		background: #316fe0 !important;
+		color: #fff !important;
 	}
 	.btn-addToCart:focus{
-		background: #316fe0;
-		color: #fff;
+		background: #316fe0 !important;
+		color: #fff !important;
 	}
 
 	.options dt{	
-		width:70px;
-		color: #aaa;
-		padding: 4px 0;
+		width:70px !important;
+		color: #aaa !important;
+		padding: 4px 0 !important;
 	}
 
 	.option dt{
-		padding: 10px 0;
+		padding: 10px 0 !important;
 	}
 
 	.options dd{
-		margin-left:70px;
-		padding: 4px 0;
+		margin-left:70px !important;
+		padding: 4px 0 !important;
 	}
 
 	.option ul{
-		list-style: none;
-		padding:0;
+		list-style: none !important;
+		padding:0 !important;
 	}
 
 	.option ul li{

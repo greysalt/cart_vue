@@ -11,11 +11,11 @@ const state = {
 		desc: '9.7 英寸 Retina 显示屏、800 万像素摄像头、Touch ID 指纹识别传感器、轻至 469 克',
 		price: '2688 - 4588',
 		style: {
-			'银色': './static/img/ipad-silver.png',
-			'金色': './static/img/ipad-gold.png',
-			'深空灰': './static/img/ipad-spacegray.png'
+			'银色': 'https://store.storeimages.cdn-apple.com/8750/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/wifi/ipad-wifi-select-silver-201703_GEO_CN?wid=470&hei=556&fmt=png-alpha&qlt=95&.v=1506556739835',
+			'金色': 'https://store.storeimages.cdn-apple.com/8750/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/wifi/ipad-wifi-select-gold-201703_GEO_CN?wid=470&hei=556&fmt=png-alpha&qlt=95&.v=1506556668980',
+			'深空灰': 'https://store.storeimages.cdn-apple.com/8750/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/wifi/ipad-wifi-select-spacegray-201703_GEO_CN?wid=470&hei=556&fmt=png-alpha&qlt=95&.v=1506556795031'
 		},
-		activeStyleUrl: './static/img/ipad-silver.png',
+		activeStyleUrl: 'https://store.storeimages.cdn-apple.com/8750/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/wifi/ipad-wifi-select-silver-201703_GEO_CN?wid=470&hei=556&fmt=png-alpha&qlt=95&.v=1506556739835',
 		storage: {
 			'32GB': 2688,
 			'128GB': 3488

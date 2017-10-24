@@ -21,6 +21,6 @@ export default {
 </script>
 <style>
 .badge-info{
-	background: #4984ef;
+	background: #4984ef !important;
 }
 </style>
