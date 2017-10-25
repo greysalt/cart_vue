@@ -23,8 +23,10 @@ const mutations = {
 		addItem(state){
 			const type = state.iPad.activeStyle +','+ state.iPad.activeStorage +','+ state.iPad.activeConnectivity;
 			const cartInfo = {
+				name:state.iPad.name,
 				type: type,
-				price: state.iPad.price
+				price: state.iPad.price,
+				imgUrl: state.iPad.activeStyleUrl
 			};
 			state.cart.push(cartInfo);
 		},

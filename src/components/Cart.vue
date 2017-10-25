@@ -32,30 +32,32 @@ export default {
 </script>
 
 <template>
-	<div class="container">
-		<div id="cart" class="cart col-sm-8 col-md-8 col-md-offset-2 col-sm-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<span class="glyphicon glyphicon-shopping-cart text-muted"></span>
-					<span class="text-muted"> 购物车</span>
-					<span class="pull-right text-strong"><strong>总计：{{ totalPrice }}</strong></span>
-				</div>
-				<div class="panel-body">
+	<div>
+		<div class="header">	
+					<span class="title"> 购物车</span>
+					<span class="price"><strong>总计：{{ totalPrice }}</strong></span>
+		</div>
+		<div class="cart">								
 					<ul>
 						<li class="cart-item"
 							v-for="item in cart">
-							<span class="glyphicon glyphicon-remove-circle text-strong"
-									@click="removeItem(item)"></span>
-							<span>Apple iPad</span>
-							<span class="item-type">{{ item.type }}</span>
-							<span>x1</span>
-							<span class="cart-price pull-right"><strong>{{ item.price }}</strong></span>
+							<div class="img-box">
+								<img :src="item.imgUrl">
+							</div>
+							<div class="item-detail">
+								
+								<span class="item-name">{{ item.name }}</span>
+								<span class="item-type">{{ item.type }}</span>
+								<span class="item-price text-strong"><strong>{{ item.price }}</strong></span>
+								<span class="item-remove"
+										@click="removeItem(item)"></span>
+							</div>
+							<div class="clear"></div>
 						</li>
 					</ul>
+						<button class="btn btn-block">结算</button>
 				</div>
-				<div class="panel-footer">
-					<button class="btn btn-block btn-buy">结算</button>
-				</div>
+				
 				
 			</div>
 			
@@ -65,39 +67,100 @@ export default {
 </template>
 
 <style>
+	.header{
+		height: 1.4rem;
+		background: #efefef;
+		border-bottom: 1px solid #ddd;
+		padding: .5rem .5rem 0 .5rem;
+		position: fixed;
+		width: 100%;
+		top:0;
+		z-index: 999;
+	}
+	.header .title{
+		color: #999;
+
+	}
+	.header .price{
+		float: right;
+		color: #4984ef;
+	}
+
+	.cart{
+		margin-bottom:2rem;
+		margin-top:1rem;
+		padding: .5rem;
+		font-size: .36rem;
+	}
+
 	.cart ul {
 		list-style: none;
 		padding: 0;
+		position: relative;
+	}
+	.cart li{
+		position: relative;
+		padding: .5em 0;
+		border-bottom: 1px solid #ddd;
 	}
 
-	.cart li {
-		padding: 4px 8px;
+
+	.cart .img-box {
+		width:1.6rem;
+		height: 1.6rem;
+		float: left;
+		text-align: center;
+
 	}
-	.btn-buy{
-		background: #4984ef;
-		color: #fff;
-	}
-	.btn-buy:hover{
-		background: #316fe0;
-		color: #fff;
+	.img-box img{
+		width: auto;
+		height: 100%;
 	}
 
-	.btn-buy:focus{
-		background: #4984ef;
-		color: #fff;
+	.cart .item-detail{
+		margin-left:1.8rem;
+	}
+	.cart .item-detail span{
+	}
+
+	.item-name{
+		display: block;
+		margin-bottom: .3rem;
 	}
 	.item-type{
-		padding: 2px 8px;
-		border-radius: 4px;
+		padding: .05rem .2rem;
+		border-radius: .1rem;
 		border: 1px solid #4984ef;
 		color: #4984ef;
+		font-size:.32rem;
+	}
+	.item-price {
+		display: block;
+		position: absolute;
+		top:0.2rem;
+		right: 0;
+
+	}
+	.item-remove{
+		display: block;
+		width: 40px;
+		height: 40px;
+		background: url("../../static/img/icon.png");
+		background-position: 0 -520px;
+		float: right;
+		cursor: pointer;
 	}
 
-	.cart-price,.text-strong {
+	.text-strong {
 		color: #4984ef;
 	}
-	.cart-item span{
-		margin-right: 4px;
-
+		.btn{
+		font-size:.4rem;
+		padding: .2rem .4rem;
+		border-radius: .1rem;
+	}
+	.btn-block{
+		width: 100%;
+		margin-top:.2rem;
 	}
 </style>
