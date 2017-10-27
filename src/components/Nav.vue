@@ -71,7 +71,8 @@ export default {
 	font-style: normal;
 	text-align: center;
 	color: #fff;
-	font-size: 34px;
+	font-size: 32px;
+	line-height: 46px;
 }
 
 </style>

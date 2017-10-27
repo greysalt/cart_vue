@@ -55,7 +55,8 @@ export default {
 							<div class="clear"></div>
 						</li>
 					</ul>
-						<button class="btn btn-block">结算</button>
+					<div class="empty-cart" v-if="!cart.length">购物车空空如也</div>
+					<button class="btn btn-block" v-if="cart.length">结算</button>
 				</div>
 				
 				
@@ -84,6 +85,16 @@ export default {
 	.header .price{
 		float: right;
 		color: #4984ef;
+	}
+
+	.empty-cart {
+		margin:1rem 0;
+		height: 4rem;
+		border:5px dashed #ddd;
+		border-radius: .2rem;
+		text-align: center;
+		line-height: 4rem;
+		color: #999;
 	}
 
 	.cart{
@@ -154,13 +165,13 @@ export default {
 	.text-strong {
 		color: #4984ef;
 	}
-		.btn{
+/*	.btn{
 		font-size:.4rem;
-		padding: .2rem .4rem;
+		padding: .3rem .4rem;
 		border-radius: .1rem;
 	}
 	.btn-block{
 		width: 100%;
-		margin-top:.2rem;
-	}
+		margin-top:.4rem;
+	}*/
 </style>
