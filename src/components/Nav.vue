@@ -24,8 +24,8 @@ export default {
 	bottom:0;
 	width:100%;
 	height: 1.4rem;
-	background: #efefef;
-	border-top: 1px solid #ddd;
+	background: #ddd;
+	border-top: 1px solid #ccc;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;

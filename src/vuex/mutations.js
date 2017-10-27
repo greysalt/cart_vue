@@ -23,11 +23,10 @@ const mutations = {
 		},
 		addItem(state,payload){
 			let totalType = state[payload.itemName].totalType;
-			let type='';
+			let type = state[payload.itemName].activeStyle;
 			for (let key in totalType){
-				type = type + totalType[key] + ','; 
+				type = type + ',' + totalType[key]; 
 			}
-			type = type.slice(0,-1);
 			const cartInfo = {
 				name:state[payload.itemName].name,
 				type: type,

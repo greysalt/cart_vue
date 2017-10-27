@@ -7,3 +7,5 @@ button{outline: none;border:none;color:#fff;background:#4984ef;cursor: pointer;}
 button:hover{color:#fff;background:#316fe0;}
 button[disabled]{cursor: not-allowed;}
 .clear{clear: both;}
+
+

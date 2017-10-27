@@ -70,8 +70,8 @@ export default {
 <style>
 	.header{
 		height: 1.4rem;
-		background: #efefef;
-		border-bottom: 1px solid #ddd;
+		background: #ddd;
+		border-bottom: 1px solid #ccc;
 		padding: .5rem .5rem 0 .5rem;
 		position: fixed;
 		width: 100%;
