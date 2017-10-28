@@ -183,18 +183,18 @@ export default {
 		display: inline-block;
 		padding: .2rem .4rem;
 		margin-right: .2rem;
-		border:4px solid #eee;
+		border:3px solid #eee;
 		border-radius: .1rem;
 		cursor: pointer;
 		margin-bottom: .2rem;
 	}
 
 	.option ul li:hover{
-		border:4px solid #4984ef;
+		border:3px solid #4984ef;
 	}
 
 	.option ul li.active{
-		border:4px solid #4984ef;
+		border:3px solid #4984ef;
 	}
 
 	.text-price{

@@ -154,10 +154,11 @@ export default {
 	}
 	.item-remove{
 		display: block;
-		width: 40px;
-		height: 40px;
+		width: .4rem;
+		height: .4rem;
 		background: url("../../static/img/icon.png");
-		background-position: 0 -520px;
+		background-position: 0 -5.2rem;
+		background-size: 200% auto;
 		float: right;
 		cursor: pointer;
 	}

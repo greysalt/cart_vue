@@ -38,9 +38,10 @@ export default {
 
 .navbar .icon{
 	display: block;
-	width:80px;
-	height: 80px;
+	width:.8rem;
+	height:.8rem;
 	background: url('../../static/img/icon.png') no-repeat;
+	background-size: 100% auto;
 	line-height: 80px;
 }
 
@@ -49,30 +50,30 @@ export default {
 }
 
 .navbar .item.active .icon-index {
-	background-position:0 -80px;
+	background-position:0 -.8rem;
 }
 
 .navbar .item .icon-cart {
-	background-position:0 -160px;
+	background-position:0 -1.6rem;
 }
 .navbar .item.active .icon-cart {
-	background-position:0 -240px;
+	background-position:0 -2.4rem;
 }
 
 .navbar .item-count{
 	display: block;
-	width: 46px;
-	height: 46px;
-	border-radius: 30px;
+	width: .45rem;
+	height: .45rem;
+	border-radius: .5rem;
 	background: #4984ef;
 	position: absolute;
-	right:-24px;
-	top:-10px;
+	right:-.24rem;
+	top:-.1rem;
 	font-style: normal;
 	text-align: center;
 	color: #fff;
-	font-size: 32px;
-	line-height: 46px;
+	font-size: .32rem;
+	line-height: .45rem;
 }
 
 </style>
