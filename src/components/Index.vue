@@ -51,44 +51,44 @@
 </template>
 <style>
 #index .slide{
-	height: 5rem;
+	height: 9rem;
 	background: #ddd;
 }
 #index .item-list{
-	margin-bottom: 1.4rem;
+	margin-bottom: 5rem;
 }
 
 #index .item-list hr{
-	margin-left:.5rem;
+	margin-left:2rem;
 }
 
 #index .item{
-	padding: .3rem 0 .3rem .5rem;
+	padding: 1rem 0 1rem 2rem;
 }
 #index .item:active{
 	background: #f2f2f2;
 }
 
 #index .img-box {
-	height: 4rem;
-	width: 4rem;
+	height: 12rem;
+	width: 12rem;
 	float: left;
 	text-align: center;
 }
 
 #index .img-box.first{
-	padding-top: .5rem;
+	padding-top: 2rem;
 }
 
 #index .img-box img{
-	max-width: 4rem;
-	max-height: 4rem;
+	max-width: 12rem;
+	max-height: 12rem;
 }
 
 #index .name{
-	line-height: 4rem;
-	font-size: .5rem;
-	margin-left:5rem;
+	line-height: 12rem;
+	font-size: 2rem;
+	margin-left:14rem;
 	color: #666;
 
 }

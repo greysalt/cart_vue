@@ -130,41 +130,44 @@ export default {
 
 <style>
 	.container.item{
-		margin-bottom:2rem;
-		padding: .5rem;
+		margin-bottom:10rem;
+		padding: 2rem;
 	}
 
 	.item .gallery {
 		text-align: center;
-		margin-bottom: .5rem;
+		margin-bottom: 2rem;
 	}
 	.item .gallery img {
-		max-height: 5rem;
+		max-height: 16rem;
 	}
 
 	.detail .name {
 		font-weight: lighter;
-		margin-bottom: .2rem;
+		margin-bottom: 1rem;
 	}
 	
 	.options {
-		margin:.2rem 0;
+		margin:1rem 0;
+		font-size: 1.4rem;
 	}
 
 	.options dl{
 		position: relative;
 
 	}
+
+	.options dl.brief,.options dl.price{
+		margin-bottom: 2rem;
+	}
 	.options dt{	
-		width:2.2rem;
+		width:5rem;
 		color: #aaa;
 		text-align: right;
 		float:left;
-		padding: .2rem 0;
 	}
 	.options dd{
-		margin-left:2.4rem !important;
-		padding: .2rem 0;
+		margin-left:5rem !important;
 	}
 
 
@@ -181,12 +184,12 @@ export default {
 
 	.option ul li{
 		display: inline-block;
-		padding: .2rem .4rem;
-		margin-right: .2rem;
+		padding: .6rem 1.2rem;
+		margin-right: .5rem;
 		border:2px solid #eee;
-		border-radius: .1rem;
+		border-radius: .4rem;
 		cursor: pointer;
-		margin-bottom: .2rem;
+		margin-bottom: 1rem;
 	}
 
 	.option ul li:hover{
@@ -202,13 +205,13 @@ export default {
 	}
 
 	.btn{
-		font-size:.4rem;
-		padding: .3rem .4rem;
-		border-radius: .1rem;
+		font-size: 1.6rem;
+		padding: 1rem 2rem;
+		border-radius: .4rem;
 	}
 	.btn-block{
 		width: 100%;
-		margin-top:.4rem;
+		margin-top:1rem;
 	}
 
 

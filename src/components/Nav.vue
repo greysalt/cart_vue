@@ -20,10 +20,10 @@ export default {
 </script>
 <style>
 .navbar {
-	position:fixed;
+	position:absolute;
 	bottom:0;
 	width:100%;
-	height: 1.4rem;
+	height: 5rem;
 	background: #ddd;
 	border-top: 1px solid #ccc;
 	display: flex;
@@ -38,11 +38,11 @@ export default {
 
 .navbar .icon{
 	display: block;
-	width:.8rem;
-	height:.8rem;
+	width:3rem;
+	height:3rem;
 	background: url('../../static/img/icon.png') no-repeat;
 	background-size: 100% auto;
-	line-height: 80px;
+	line-height: 3rem;
 }
 
 .navbar .item .icon-index {
@@ -50,30 +50,30 @@ export default {
 }
 
 .navbar .item.active .icon-index {
-	background-position:0 -.8rem;
+	background-position:0 -3rem;
 }
 
 .navbar .item .icon-cart {
-	background-position:0 -1.6rem;
+	background-position:0 -6rem;
 }
 .navbar .item.active .icon-cart {
-	background-position:0 -2.4rem;
+	background-position:0 -9rem;
 }
 
 .navbar .item-count{
 	display: block;
-	width: .45rem;
-	height: .45rem;
-	border-radius: .5rem;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 2rem;
 	background: #4984ef;
 	position: absolute;
-	right:-.24rem;
-	top:-.1rem;
+	right:-1.2rem;
+	top:-0.5rem;
 	font-style: normal;
 	text-align: center;
 	color: #fff;
-	font-size: .32rem;
-	line-height: .45rem;
+	font-size: 1.6rem;
+	line-height: 2rem;
 }
 
 </style>

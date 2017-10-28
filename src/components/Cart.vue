@@ -32,7 +32,7 @@ export default {
 </script>
 
 <template>
-	<div>
+	<div class="cart-container">
 		<div class="header">	
 					<span class="title"> 购物车</span>
 					<span class="price"><strong>总计：{{ totalPrice }}</strong></span>
@@ -69,11 +69,11 @@ export default {
 
 <style>
 	.header{
-		height: 1.4rem;
+		height: 5rem;
 		background: #ddd;
 		border-bottom: 1px solid #ccc;
-		padding: .5rem .5rem 0 .5rem;
-		position: fixed;
+		padding: 1.6rem 2rem 0 2rem;
+		position: absolute;
 		width: 100%;
 		top:0;
 		z-index: 999;
@@ -88,20 +88,19 @@ export default {
 	}
 
 	.empty-cart {
-		margin:1rem 0;
-		height: 4rem;
+		margin:2rem 0;
+		height: 20rem;
 		border:2px dashed #ddd;
-		border-radius: .2rem;
+		border-radius: .4rem;
 		text-align: center;
-		line-height: 4rem;
+		line-height: 20rem;
 		color: #999;
 	}
 
 	.cart{
-		margin-bottom:2rem;
-		margin-top:1rem;
-		padding: .5rem;
-		font-size: .36rem;
+		margin-bottom:20rem;
+		margin-top:3rem;
+		padding: 2rem;
 	}
 
 	.cart ul {
@@ -111,14 +110,14 @@ export default {
 	}
 	.cart li{
 		position: relative;
-		padding: .5em 0;
+		padding: 1em 0;
 		border-bottom: 1px solid #ddd;
 	}
 
 
 	.cart .img-box {
-		width:1.6rem;
-		height: 1.6rem;
+		width:6rem;
+		height: 6rem;
 		float: left;
 		text-align: center;
 
@@ -129,36 +128,36 @@ export default {
 	}
 
 	.cart .item-detail{
-		margin-left:1.8rem;
+		margin-left:6.5rem;
 	}
 	.cart .item-detail span{
 	}
 
 	.item-name{
 		display: block;
-		margin-bottom: .3rem;
+		margin-bottom: 1rem;
 	}
 	.item-type{
-		padding: .05rem .2rem;
-		border-radius: .1rem;
+		padding: .2rem .6rem;
+		border-radius: 0.4rem;
 		border: 1px solid #4984ef;
 		color: #4984ef;
-		font-size:.32rem;
+		font-size:1.2rem;
 	}
 	.item-price {
 		display: block;
 		position: absolute;
-		top:0.2rem;
+		top:1.4rem;
 		right: 0;
 
 	}
 	.item-remove{
 		display: block;
-		width: .4rem;
-		height: .4rem;
+		width: 2rem;
+		height: 2rem;
 		background: url("../../static/img/icon.png");
-		background-position: 0 -5.2rem;
-		background-size: 200% auto;
+		background-position: 0 -26rem;
+		background-size:200% auto;
 		float: right;
 		cursor: pointer;
 	}
@@ -166,13 +165,4 @@ export default {
 	.text-strong {
 		color: #4984ef;
 	}
-/*	.btn{
-		font-size:.4rem;
-		padding: .3rem .4rem;
-		border-radius: .1rem;
-	}
-	.btn-block{
-		width: 100%;
-		margin-top:.4rem;
-	}*/
 </style>
