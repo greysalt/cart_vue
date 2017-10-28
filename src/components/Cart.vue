@@ -90,7 +90,7 @@ export default {
 	.empty-cart {
 		margin:1rem 0;
 		height: 4rem;
-		border:5px dashed #ddd;
+		border:2px dashed #ddd;
 		border-radius: .2rem;
 		text-align: center;
 		line-height: 4rem;

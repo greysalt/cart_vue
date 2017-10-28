@@ -1,5 +1,5 @@
 *{margin:0;padding: 0;box-sizing: border-box;-webkit-tap-highlight-color:transparent}
-html{font-size:50px;}
+html{font-size:40px;}
 body{font-size:.4rem;color:#333;font-family: Helvetica,Arial,sans-serif;}
 ul,li{list-style: none;}
 a{text-decoration: none;}
@@ -8,15 +8,10 @@ button:hover{color:#fff;background:#316fe0;}
 button[disabled]{cursor: not-allowed;}
 .clear{clear: both;}
 
-@media (min-width: 640px){
-	html{font-size: 60px}
+@media (max-width: 413px){
+	html{font-size: 36px;}
 }
 
-@media (min-width: 750px){
-	html{font-size: 70px}
+@media (max-width: 374px){
+	html{font-size: 30px;}
 }
-
-@media (min-width: 1080px){
-	html{font-size: 100px}
-}
-
