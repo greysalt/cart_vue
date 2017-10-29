@@ -98,9 +98,8 @@ export default {
 	}
 
 	.cart{
-		margin-bottom:20rem;
-		margin-top:3rem;
-		padding: 2rem;
+		margin-bottom:10rem;
+		padding: 5rem 2rem 0 2rem;
 	}
 
 	.cart ul {
