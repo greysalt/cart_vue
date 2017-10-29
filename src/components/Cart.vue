@@ -56,7 +56,7 @@ export default {
 						</li>
 					</ul>
 					<div class="empty-cart" v-if="!cart.length">购物车空空如也</div>
-					<button class="btn btn-block" v-if="cart.length">结算</button>
+					<button class="btn btn-block btn-margin-top" v-if="cart.length">结算</button>
 				</div>
 				
 				
@@ -73,7 +73,7 @@ export default {
 		background: #ddd;
 		border-bottom: 1px solid #ccc;
 		padding: 1.6rem 2rem 0 2rem;
-		position: absolute;
+		position: fixed;
 		width: 100%;
 		top:0;
 		z-index: 999;
@@ -164,5 +164,9 @@ export default {
 
 	.text-strong {
 		color: #4984ef;
+	}
+
+	.btn-margin-top{
+		margin-top:2rem;
 	}
 </style>

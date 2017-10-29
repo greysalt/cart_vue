@@ -1,18 +1,10 @@
 *{margin:0;padding: 0;box-sizing: border-box;-webkit-tap-highlight-color:transparent}
 html{font-size:10px;}
-body{font-size:1.6rem;color:#333;font-family: Helvetica,Arial,sans-serif;background: #f2f2f2;}
+body{font-size:1.6rem;color:#333;font-family: Helvetica,Arial,sans-serif;}
 ul,li{list-style: none;}
 a{text-decoration: none;}
 button{outline: none;border:none;color:#fff;background:#4984ef;cursor: pointer;}
 button:hover{color:#fff;background:#316fe0;}
 button[disabled]{cursor: not-allowed;}
 .clear{clear: both;}
-hr{color: #ddd;}
-#app{
-	position: relative;
-	width: 375px;
-	height: 667px;
-	overflow: hidden;
-	margin:0 auto;
-	background: #fff;
-}
+hr{background: #ddd;height: 1px;border:none;}

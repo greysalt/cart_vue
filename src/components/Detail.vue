@@ -158,7 +158,7 @@ export default {
 	}
 
 	.options dl.brief,.options dl.price{
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 	}
 	.options dt{	
 		width:5rem;
@@ -211,7 +211,6 @@ export default {
 	}
 	.btn-block{
 		width: 100%;
-		margin-top:1rem;
 	}
 
 

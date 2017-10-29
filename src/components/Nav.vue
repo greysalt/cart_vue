@@ -20,7 +20,7 @@ export default {
 </script>
 <style>
 .navbar {
-	position:absolute;
+	position:fixed;
 	bottom:0;
 	width:100%;
 	height: 5rem;

@@ -1,7 +1,16 @@
-<script></script>
+<script>
+import Swiper from './Swiper'
+export default {
+	components:{
+		'my-swiper':Swiper
+	}
+}
+</script>
 <template>
 	<div id="index">
-		<div class="slide"></div>
+		<div class="slide">
+			<my-swiper></my-swiper>
+		</div>
 		<div class="item-list">
 			<ul>
 				<li>
@@ -51,11 +60,12 @@
 </template>
 <style>
 #index .slide{
-	height: 9rem;
-	background: #ddd;
+	height:16rem;
+	background: #fff; 
 }
 #index .item-list{
 	margin-bottom: 5rem;
+	margin-top:1rem;
 }
 
 #index .item-list hr{
@@ -78,6 +88,7 @@
 
 #index .img-box.first{
 	padding-top: 2rem;
+	overflow: hidden;
 }
 
 #index .img-box img{
@@ -90,7 +101,6 @@
 	font-size: 2rem;
 	margin-left:14rem;
 	color: #666;
-
 }
 	
 </style>
