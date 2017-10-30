@@ -53,8 +53,8 @@ const state = {
 	},
 	AppleWatch:{
 		name: 'Apple Watch',
-		desc: '9.7 英寸 Retina 显示屏、800 万像素摄像头、Touch ID 指纹识别传感器、轻至 469 克',
-		price: '2588 - 3188',
+		desc: 'Ion-X 强化玻璃镜面，内置 GPS 和 GLONASS 定位系统、气压高度计、心率传感器、更快的双核处理器、50 米防水，最长可达 18 小时的电池使用时间',
+		price:'2588 - 4488',
 		style: {
 			'云雾灰': 'https://store.storeimages.cdn-apple.com/8750/as-images.apple.com/is/image/AppleInc/aos/published/images/4/2/42/alu/42-alu-silver-sport-fog-1up_GEO_CN?wid=470&hei=556&fmt=png-alpha&qlt=95&.v=1506623478118',
 			'粉砂色': 'https://store.storeimages.cdn-apple.com/8750/as-images.apple.com/is/image/AppleInc/aos/published/images/4/2/42/alu/42-alu-gold-sport-pink-1up_GEO_CN?wid=470&hei=556&fmt=png-alpha&qlt=95&.v=1506621191805',
