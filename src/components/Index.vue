@@ -3,10 +3,24 @@ import Swiper from './Swiper'
 export default {
 	components:{
 		'my-swiper':Swiper
+	},
+	computed:{
+		slideName_index:function(){
+			return this.$store.state.slideName_index;
+		}
+	},
+	methods:{
+		addSlideName:function(){
+			this.$store.commit('addSlideName');
+		},
+		removeSlideName:function(){
+			this.$store.commit('removeSlideName');
+		}
 	}
 }
 </script>
 <template>
+	<transition :name="slideName_index">
 	<div id="index">
 		<div class="slide">
 			<my-swiper></my-swiper>
@@ -57,9 +71,18 @@ export default {
 			</ul>
 		</div>
 	</div>
+</transition>
 </template>
 <style>
+#index {
+	position: absolute;
+	background: #fff;
+	width: 100%;
+	z-index: 888;
+}
+
 #index .slide{
+	position: relative;
 	height:16rem;
 	background: #fff; 
 }

@@ -1,6 +1,7 @@
 <script>
 
 export default {
+
 	computed: {
 		itemName:function(){ 
 			return this.$route.query.name 
@@ -32,8 +33,13 @@ export default {
 			}else{
 				return this.item.price;
 			}
+		},
+		slideName_cart:function(){
+			return this.$store.state.slideName_cart;
 		}
+
 	},
+	
 	methods: {
 		changeStyle: function(payload){
 			this.$store.commit('changeStyle',payload);
@@ -49,6 +55,12 @@ export default {
 		},
 		addItem: function(itemName){
 			this.$store.commit('addItem',itemName);
+		},
+		addSlideName: function(){
+			this.$store.commit('addSlideName');
+		},
+		removeSlideName: function(){
+			this.$store.commit('removeSlideName');
 		}
 	}
 
@@ -57,7 +69,11 @@ export default {
 </script>
 
 <template>
-	<div class="container item">
+	<transition :name="slideName_cart">
+	<div class="detail-item item">
+		<div class="btn-back">
+			<a href="#" onClick="javascript:history.go(-1);">&lt;</a>
+		</div>
 		<div class="gallery">
 			<img  class="img-responsive" :src="item.activeStyleUrl">
 		</div>
@@ -125,13 +141,40 @@ export default {
 					:disabled="!all_selected">
 			加入购物车</button>
 		</div>							
-	</div>	
+	</div>
+	</transition>
 </template>
 
 <style>
-	.container.item{
+	.btn-back{
+		height: 3rem;
+		width: 3rem;
+		line-height: 2.9rem;
+		background: #ddd;
+		opacity: .5;
+		position: absolute;
+		top:2rem;
+		left:2rem;
+		text-align: center;
+		font-size:2rem;
+		border-radius: 4rem;
+		font-family: ariel;
+	}
+
+	.btn-back:active{
+		background: #aaa;
+
+	}
+	
+	.detail-item.item{
 		margin-bottom:10rem;
 		padding: 2rem;
+		position: absolute;
+		width: 100%;
+		top:0;
+		left:0;
+		background: #fff;
+		z-index: 888;
 	}
 
 	.item .gallery {
@@ -212,7 +255,5 @@ export default {
 	.btn-block{
 		width: 100%;
 	}
-
-
 
 </style>

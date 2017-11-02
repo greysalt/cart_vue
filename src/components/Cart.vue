@@ -2,6 +2,13 @@
 import { mapMutations,mapState } from 'vuex'
 
 export default {
+	data(){
+		return {
+			btnMove:false,
+			btnMoveActive:false,
+		}
+	},
+
 	computed:{
 		...mapState([
 			'cart'
@@ -17,57 +24,104 @@ export default {
 				totalPrice += cart[i].price;
 			}
 			return totalPrice;
+		},
+		btnRemove:function(){
+			return document.getElementById('btn-remove-box')
 		}
 	},
 	methods:{
-		...mapMutations([
-			'removeItem'
-		])
+		// ...mapMutations([
+		// 	'removeItem'
+		// ])
 		
-		// removeItem: function(item){
-		// 	this.$store.commit('removeItem',item);
-		// }
+		removeItem: function(item){
+			this.$store.commit('removeItem',item);
+		}, 
+
+	},
+	watch:{
+		cart:function(){
+			let count = this.cart.length;
+			this.btnRemove.style.top = (count*9+7)+'rem';
+		}
+	},
+	mounted:function(){
+			let count = this.cart.length;
+			this.btnRemove.style.top = (count*9+7)+'rem';
 	}
+	
 }
 </script>
 
 <template>
+	<transition name="fade">
 	<div class="cart-container">
 		<div class="header">	
 					<span class="title"> 购物车</span>
-					<span class="price"><strong>总计：{{ totalPrice }}</strong></span>
+					<span class="price"><strong>总计：￥{{ totalPrice }}</strong></span>
 		</div>
 		<div class="cart">								
-					<ul>
-						<li class="cart-item"
-							v-for="item in cart">
-							<div class="img-box">
-								<img :src="item.imgUrl">
-							</div>
-							<div class="item-detail">
-								
-								<span class="item-name">{{ item.name }}</span>
-								<span class="item-type">{{ item.type }}</span>
-								<span class="item-price text-strong"><strong>{{ item.price }}</strong></span>
-								<span class="item-remove"
-										@click="removeItem(item)"></span>
-							</div>
-							<div class="clear"></div>
-						</li>
-					</ul>
-					<div class="empty-cart" v-if="!cart.length">购物车空空如也</div>
-					<button class="btn btn-block btn-margin-top" v-if="cart.length">结算</button>
-				</div>
-				
-				
-			</div>
 			
+				<transition-group name="list" tag="ul">
+				<li class="cart-item list-item"
+					v-for="item in cart"
+					v-bind:key="item.id">
+					<div class="img-box">
+						<img :src="item.imgUrl">
+					</div>
+					<div class="item-detail">
+						<span class="item-remove"
+								@click="removeItem(item)"></span>
+						<span class="item-name">{{ item.name }}</span>
+						<span class="item-type">{{ item.type }}</span>
+						<span class="item-price text-strong"><strong>￥{{ item.price }}</strong></span>
+					</div>
+					<div class="clear"></div>
+				</li>
+				</transition-group>
+			
+			<transition name="fade">
+				<div class="empty-cart" v-if="!cart.length">购物车空空如也</div>
+			</transition>
+				
 		</div>
+
+		<div id="btn-remove-box" class="btnbox btn-move-active">
+			<button  class="btn btn-remove " 
+						v-if="cart.length">结算</button>
+		</div>
+				
+	</div>
+	</transition>
+			
 		
-	</div>	
+	
 </template>
 
 <style>
+.btnbox{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	padding: 0 2rem;
+}
+
+.btn-remove{
+	width: 100%;
+	position: relative;
+}
+
+.btn-move-active{
+		transition: all .8s;
+}
+
+
+	
+	.cart-container{
+		position: absolute;
+		width: 100%;
+		z-index: 666;
+	}
 	.header{
 		height: 5rem;
 		background: #ddd;
@@ -76,7 +130,7 @@ export default {
 		position: fixed;
 		width: 100%;
 		top:0;
-		z-index: 999;
+		z-index: 666;
 	}
 	.header .title{
 		color: #999;
@@ -106,11 +160,14 @@ export default {
 		list-style: none;
 		padding: 0;
 		position: relative;
+
 	}
 	.cart li{
-		position: relative;
 		padding: 1em 0;
 		border-bottom: 1px solid #ddd;
+		background: #fff;
+		height: 9rem;
+		width: 100%;
 	}
 
 
@@ -129,12 +186,10 @@ export default {
 	.cart .item-detail{
 		margin-left:6.5rem;
 	}
-	.cart .item-detail span{
-	}
 
 	.item-name{
 		display: block;
-		margin-bottom: 1rem;
+		margin-bottom: .4rem;
 	}
 	.item-type{
 		padding: .2rem .6rem;
@@ -143,13 +198,12 @@ export default {
 		color: #4984ef;
 		font-size:1.2rem;
 	}
+
 	.item-price {
 		display: block;
-		position: absolute;
-		top:1.4rem;
-		right: 0;
-
+		margin-top:1rem;
 	}
+
 	.item-remove{
 		display: block;
 		width: 2rem;
@@ -165,7 +219,7 @@ export default {
 		color: #4984ef;
 	}
 
-	.btn-margin-top{
-		margin-top:2rem;
-	}
+	
+
+
 </style>

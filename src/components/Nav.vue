@@ -1,6 +1,9 @@
 <template>
 	<nav class="navbar">
-			<router-link to="/index" class="item" active-class="active"><i class="icon icon-index"></i></router-link>
+			<router-link to="/index" 
+						class="item" 
+						active-class="active"
+						><i class="icon icon-index"></i></router-link>
 			<router-link  to="/cart" class="item" active-class="active">
 				<i class="icon icon-cart"></i>
 				<i class="item-count" v-if="cart.length">{{ cart.length }}</i>
@@ -14,7 +17,13 @@ export default {
 	computed:
 		mapState({
 			cart: 'cart'
-		})
+		}),
+	methods:{
+		removeSlideName:function(){
+			this.$store.commit('removeSlideName');
+		}
+	}
+
 		
 }
 </script>

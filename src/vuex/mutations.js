@@ -27,7 +27,9 @@ const mutations = {
 			for (let key in totalType){
 				type = type + ',' + totalType[key]; 
 			}
+			state.idCount++; 
 			const cartInfo = {
+				id:state.idCount,
 				name:state[payload.itemName].name,
 				type: type,
 				price: payload.itemPrice,
@@ -37,7 +39,15 @@ const mutations = {
 		},
 		removeItem(state,item){
 			state.cart.splice(state.cart.indexOf(item),1);
-		}
+		},
+		addSlideName:(state)=>{
+			state.slideName_cart='slide-right';
+			state.slideName_index='slide-left';
+		},
+		removeSlideName:(state)=>{
+			state.slideName_cart='none';
+			state.slideName_index='none';
+		},
 }
 
 export default mutations

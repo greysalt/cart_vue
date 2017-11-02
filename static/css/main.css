@@ -1,10 +1,76 @@
 *{margin:0;padding: 0;box-sizing: border-box;-webkit-tap-highlight-color:transparent}
-html{font-size:10px;}
+html{font-size:10px; overflow-x:hidden;overflow-y:auto;}
 body{font-size:1.6rem;color:#333;font-family: Helvetica,Arial,sans-serif;}
 ul,li{list-style: none;}
-a{text-decoration: none;}
+a{text-decoration: none; color: #333;}
 button{outline: none;border:none;color:#fff;background:#4984ef;cursor: pointer;}
 button:hover{color:#fff;background:#316fe0;}
 button[disabled]{cursor: not-allowed;}
 .clear{clear: both;}
 hr{background: #ddd;height: 1px;border:none;}
+
+/*切换动画*/
+/*右入右出*/
+.slide-right-enter-active{
+	transition: all .8s cubic-bezier(.55,0,.1,1);
+}
+
+.slide-right-enter{
+	opacity: 0;
+	transform:translate(100%,0);
+}
+
+.slide-right-leave-active{
+	transition: all .8s cubic-bezier(.55,0,.1,1);
+}
+
+
+.slide-right-leave-to {
+	opacity: 0;
+	transform:translate(100%,0);	
+}
+
+/*左入左出*/
+.slide-left-enter-active{
+	transition: all .8s cubic-bezier(.55,0,.1,1);
+}
+
+.slide-left-enter{
+	opacity: 0;
+	transform:translate(-100%,0);
+}
+
+.slide-left-leave-active{
+	transition: all .8s cubic-bezier(.55,0,.1,1);
+}
+
+
+.slide-left-leave-to {
+	opacity: 0;
+	transform:translate(-100%,0);	
+}
+
+/*淡入淡出*/
+.fade-enter-active, .fade-leave-active{
+	transition: opacity .8s ease;
+}
+
+.fade-enter, .fade-leave-to{
+	opacity: 0;
+}
+
+
+/*删除商品*/
+.list-leave-active,.list-enter-active{
+	transition: all .8s cubic-bezier(.55,0,.1,1);
+	position: absolute;
+}
+
+.list-leave-to{
+	opacity: 0;
+	transform:translateX(-20rem);	
+}
+
+.list-move{
+	transition: transform .8s;
+}
