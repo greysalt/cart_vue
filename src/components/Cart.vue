@@ -42,12 +42,12 @@ export default {
 	watch:{
 		cart:function(){
 			let count = this.cart.length;
-			this.btnRemove.style.top = (count*9+7)+'rem';
+			this.btnRemove.style.top = (count*10+7)+'rem';
 		}
 	},
 	mounted:function(){
 			let count = this.cart.length;
-			this.btnRemove.style.top = (count*9+7)+'rem';
+			this.btnRemove.style.top = (count*10+7)+'rem';
 	}
 	
 }
@@ -166,14 +166,14 @@ export default {
 		padding: 1em 0;
 		border-bottom: 1px solid #ddd;
 		background: #fff;
-		height: 9rem;
+		height: 10rem;
 		width: 100%;
 	}
 
 
 	.cart .img-box {
-		width:6rem;
-		height: 6rem;
+		width:7rem;
+		height: 7rem;
 		float: left;
 		text-align: center;
 
@@ -202,6 +202,7 @@ export default {
 	.item-price {
 		display: block;
 		margin-top:.4rem;
+		font-size: 1.6rem;
 	}
 
 	.item-remove{
