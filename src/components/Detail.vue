@@ -72,7 +72,7 @@ export default {
 	<transition :name="slideName_cart">
 	<div class="detail-item item">
 		<div class="btn-back">
-			<a href="#" onClick="javascript:history.go(-1);">&lt;</a>
+			<a href="#" onClick="javascript:history.back(-1);">&lt;</a>
 		</div>
 		<div class="gallery">
 			<img  class="img-responsive" :src="item.activeStyleUrl">
@@ -167,7 +167,7 @@ export default {
 	}
 	
 	.detail-item.item{
-		margin-bottom:10rem;
+		margin-bottom:16rem;
 		padding: 2rem;
 		position: absolute;
 		width: 100%;

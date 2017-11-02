@@ -74,7 +74,7 @@ export default {
 								@click="removeItem(item)"></span>
 						<span class="item-name">{{ item.name }}</span>
 						<span class="item-type">{{ item.type }}</span>
-						<span class="item-price text-strong"><strong>￥{{ item.price }}</strong></span>
+						<span class="item-price text-strong">￥{{ item.price }}</span>
 					</div>
 					<div class="clear"></div>
 				</li>
@@ -201,7 +201,7 @@ export default {
 
 	.item-price {
 		display: block;
-		margin-top:1rem;
+		margin-top:.4rem;
 	}
 
 	.item-remove{
