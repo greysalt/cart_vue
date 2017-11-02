@@ -86,6 +86,7 @@ export default {
 	height:16rem;
 	background: #fff; 
 }
+
 #index .item-list{
 	margin-bottom: 5rem;
 	margin-top:1rem;

@@ -6,6 +6,7 @@ export default {
 		return {
 			btnMove:false,
 			btnMoveActive:false,
+			popupShow:false,
 		}
 	},
 
@@ -36,7 +37,14 @@ export default {
 		
 		removeItem: function(item){
 			this.$store.commit('removeItem',item);
-		}, 
+		},
+		showPopup:function(){
+			this.popupShow = true;
+			let that = this;
+			setTimeout(function(){
+				that.popupShow = false;
+			},3000);
+		} 
 
 	},
 	watch:{
@@ -62,7 +70,7 @@ export default {
 		</div>
 		<div class="cart">								
 			
-				<transition-group name="list" tag="ul">
+			<transition-group name="list" tag="ul">
 				<li class="cart-item list-item"
 					v-for="item in cart"
 					v-bind:key="item.id">
@@ -78,7 +86,7 @@ export default {
 					</div>
 					<div class="clear"></div>
 				</li>
-				</transition-group>
+			</transition-group>
 			
 			<transition name="fade">
 				<div class="empty-cart" v-if="!cart.length">购物车空空如也</div>
@@ -87,11 +95,18 @@ export default {
 		</div>
 
 		<div id="btn-remove-box" class="btnbox btn-move-active">
-			<button  class="btn btn-remove " 
-						v-if="cart.length">结算</button>
+			<button  class="btn btn-remove " v-if="cart.length" @click="showPopup()">结算</button>
 		</div>
+
+	<transition name="fade">
+		<div class="popup" v-if="popupShow">
+			您选择了 <span class="count">{{ cart.length }}</span> 件商品
+		</div>
+	</transition>
 				
 	</div>
+
+	
 	</transition>
 			
 		
@@ -99,6 +114,29 @@ export default {
 </template>
 
 <style>
+.popup{
+	position: fixed;
+	margin:auto;
+	top:0;
+	bottom: 0;
+	left:0;
+	right: 0;
+
+	width: 16rem;
+	height: 10rem;
+	background: rgba(33,33,33,.9);
+	text-align: center;
+	line-height: 10rem;
+	border-radius: .4rem;
+	color: #fff;
+	z-index: 9999;
+}
+
+.popup .count {
+	color: #4984ef;
+	font-weight: bold;
+}
+
 .btnbox{
 	width: 100%;
 	position: absolute;
@@ -152,8 +190,7 @@ export default {
 	}
 
 	.cart{
-		margin-bottom:10rem;
-		padding: 5rem 2rem 0 2rem;
+		padding: 5rem 2rem 16rem 2rem;
 	}
 
 	.cart ul {

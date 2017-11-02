@@ -83,6 +83,7 @@ export default {
 	color: #fff;
 	font-size: 1.6rem;
 	line-height: 2rem;
+	font-family: Univers,arial;
 }
 
 </style>
