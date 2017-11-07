@@ -241,7 +241,7 @@ export default {
 		display: block;
 		width: 2rem;
 		height: 2rem;
-		background: url("/static/img/icon.png");
+		background: url("/cart_vue/static/img/icon.png");
 		background-position: 0 -26rem;
 		background-size:200% auto;
 		float: right;
