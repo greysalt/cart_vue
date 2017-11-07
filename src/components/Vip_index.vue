@@ -67,7 +67,7 @@ export default{
 		width:10rem;
 		border-radius: 8rem;
 		margin:3rem auto 2rem;
-		background: url('/static/img/user.png') no-repeat;
+		background: url('/cart_vue/static/img/user.png') no-repeat;
 		background-size:100% auto;
 	}
 
@@ -107,25 +107,25 @@ export default{
 		height: 2rem;
 		width: 2rem;
 		vertical-align: middle;
-		background: url('/static/img/icon.png') no-repeat;
+		background: url('/cart_vue/static/img/icon2.png') no-repeat;
 		background-size: 100% auto;
 		margin-right: .5rem;
 	}
 
 	.vip .menu .icon.icon-collection{
-		background-position:0 -14rem;
+		background-position:0 0;
 	}
 
 	.vip .menu .icon.icon-order{
-		background-position:0 -16rem;
+		background-position:0 -2rem;
 	}
 
 	.vip .menu .icon.icon-coupon{
-		background-position:0 -18rem;
+		background-position:0 -4rem;
 	}
 
 	.vip .menu .icon.icon-setup{
-		background-position:0 -20rem;
+		background-position:0 -6rem;
 	}
 
 	.vip .menu .order-count{
