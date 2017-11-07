@@ -1,34 +1,62 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Cart from '../components/Cart'
-import Index from '../components/Index'
+
 import Nav from '../components/Nav'
-import Detail from'../components/Detail'
+import Home from '../components/Home'
+import Home_index from '../components/Home_index'
+import Home_detail from '../components/Home_detail'
+import Cart from '../components/Cart'
+import Vip from '../components/Vip'
+import Vip_index from '../components/Vip_index'
+import Vip_orderList from '../components/Vip_orderList'
+
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
-      redirect:'/index'
+      redirect:'/home'
     },
     {
-      path: '/index',
-      component: Index
+      path: '/home',
+      component: Home,
+      children:[
+        {
+          path:'',
+          component:Home_index
+        },
+        {
+          path:'detail',
+          name:'detail',
+          component:Home_detail
+        }
+      ]
     },
     {
       path: '/cart',
       component: Cart
     },
     {
-      name:'detail',
-      path: '/detail',
-      component: Detail
+      path: '/vip',
+      component: Vip,
+      children:[
+        {
+          path:'',
+          component: Vip_index
+        },
+        {
+          path:'order-list',
+          component:Vip_orderList
+        }
+      ]
     },
     {
       path: '*',
       redirect:'/'
     }
   ]
-})
+});
+
+export default router

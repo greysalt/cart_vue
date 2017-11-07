@@ -77,9 +77,8 @@ const state = {
 		}			
 	},
 	cart:[],
-	slideName_cart:'slide-right',
-	slideName_index:'slide-left',
-	idCount:0
+	idCount:0,
+	orderList:[],
 }
 
 

@@ -10,49 +10,38 @@ button[disabled]{cursor: not-allowed;}
 hr{background: #ddd;height: 1px;border:none;}
 
 /*切换动画*/
-/*右入右出*/
-.slide-right-enter-active{
-	transition: all .8s cubic-bezier(.55,0,.1,1);
+/*左滑*/
+.slide-left-leave-active, .slide-left-enter-active{
+	transition:all .8s cubic-bezier(.55,0,.1,1);
 }
-
-.slide-right-enter{
-	opacity: 0;
-	transform:translate(100%,0);
-}
-
-.slide-right-leave-active{
-	transition: all .8s cubic-bezier(.55,0,.1,1);
-}
-
-
-.slide-right-leave-to {
-	opacity: 0;
-	transform:translate(100%,0);	
-}
-
-/*左入左出*/
-.slide-left-enter-active{
-	transition: all .8s cubic-bezier(.55,0,.1,1);
-}
-
-.slide-left-enter{
-	opacity: 0;
-	transform:translate(-100%,0);
-}
-
-.slide-left-leave-active{
-	transition: all .8s cubic-bezier(.55,0,.1,1);
-}
-
 
 .slide-left-leave-to {
-	opacity: 0;
-	transform:translate(-100%,0);	
+	transform: translateX(-100%);
+	/*opacity: 0;*/
 }
 
+.slide-left-enter {
+	transform: translateX(100%);
+	/*opacity: 0;*/
+}
+
+/*右滑*/
+.slide-right-leave-active, .slide-right-enter-active{
+	transition: all .8s cubic-bezier(.55,0,.1,1);
+}
+
+.slide-right-leave-to {
+	transform: translateX(100%);
+	/*opacity: 0;*/
+}
+
+.slide-right-enter {
+	transform: translateX(-100%);
+	/*opacity: 0;*/
+}
 /*淡入淡出*/
 .fade-enter-active, .fade-leave-active{
-	transition: opacity .8s ease;
+	transition: all .8s ease;
 }
 
 .fade-enter, .fade-leave-to{

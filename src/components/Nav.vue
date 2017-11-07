@@ -1,12 +1,16 @@
 <template>
 	<nav class="navbar">
-			<router-link to="/index" 
+			<router-link to="/home" 
 						class="item" 
 						active-class="active"
 						><i class="icon icon-index"></i></router-link>
 			<router-link  to="/cart" class="item" active-class="active">
 				<i class="icon icon-cart"></i>
 				<i class="item-count" v-if="cart.length">{{ cart.length }}</i>
+			</router-link>
+
+			<router-link  to="/vip" class="item" active-class="active">
+				<i class="icon icon-vip"></i>
 			</router-link>
 	</nav>		
 </template>
@@ -18,12 +22,6 @@ export default {
 		mapState({
 			cart: 'cart'
 		}),
-	methods:{
-		removeSlideName:function(){
-			this.$store.commit('removeSlideName');
-		}
-	}
-
 		
 }
 </script>
@@ -49,7 +47,7 @@ export default {
 	display: block;
 	width:3rem;
 	height:3rem;
-	background: url('../../static/img/icon.png') no-repeat;
+	background: url('/static/img/icon.png') no-repeat;
 	background-size: 100% auto;
 	line-height: 3rem;
 }
@@ -69,20 +67,27 @@ export default {
 	background-position:0 -9rem;
 }
 
+.navbar .item .icon-vip {
+	background-position:0 -12rem;
+}
+.navbar .item.active .icon-vip {
+	background-position:0 -15rem;
+}
+
 .navbar .item-count{
 	display: block;
-	width: 2rem;
-	height: 2rem;
+	width: 1.8rem;
+	height: 1.8rem;
 	border-radius: 2rem;
 	background: #4984ef;
 	position: absolute;
-	right:-1.2rem;
-	top:-0.5rem;
+	right:-1rem;
+	top:-0.2rem;
 	font-style: normal;
 	text-align: center;
 	color: #fff;
 	font-size: 1.6rem;
-	line-height: 2rem;
+	line-height: 1.8rem;
 	font-family: Univers,arial;
 }
 

@@ -40,13 +40,17 @@ const mutations = {
 		removeItem(state,item){
 			state.cart.splice(state.cart.indexOf(item),1);
 		},
-		addSlideName:(state)=>{
-			state.slideName_cart='slide-right';
-			state.slideName_index='slide-left';
+		addOrder(state,totalPrice){
+			let items = state.cart.slice(0);
+			const orderInfo = {
+				items: items,
+				totalPrice: totalPrice,
+			};
+			state.orderList.push(orderInfo);
+
 		},
-		removeSlideName:(state)=>{
-			state.slideName_cart='none';
-			state.slideName_index='none';
+		removeOrder(state,list){
+			state.orderList.splice(state.orderList.indexOf(list),1);
 		},
 }
 

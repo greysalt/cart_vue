@@ -8,6 +8,7 @@ export default {
 			swiperOption:{
 				notNextTick: true,
         autoplay:4000,
+        speed:1500,
         autoplayDisableOnInteraction: false,
         pagination : '.swiper-pagination',
         paginationClickable :true,

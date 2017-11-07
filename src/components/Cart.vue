@@ -4,8 +4,6 @@ import { mapMutations,mapState } from 'vuex'
 export default {
 	data(){
 		return {
-			btnMove:false,
-			btnMoveActive:false,
 			popupShow:false,
 		}
 	},
@@ -28,7 +26,7 @@ export default {
 		},
 		btnRemove:function(){
 			return document.getElementById('btn-remove-box')
-		}
+		},
 	},
 	methods:{
 		// ...mapMutations([
@@ -38,12 +36,13 @@ export default {
 		removeItem: function(item){
 			this.$store.commit('removeItem',item);
 		},
-		showPopup:function(){
+		addOrder:function(totalPrice){
 			this.popupShow = true;
 			let that = this;
 			setTimeout(function(){
 				that.popupShow = false;
 			},3000);
+			this.$store.commit('addOrder',totalPrice);
 		} 
 
 	},
@@ -62,7 +61,6 @@ export default {
 </script>
 
 <template>
-	<transition name="fade">
 	<div class="cart-container">
 		<div class="header">	
 					<span class="title"> 购物车</span>
@@ -95,22 +93,17 @@ export default {
 		</div>
 
 		<div id="btn-remove-box" class="btnbox btn-move-active">
-			<button  class="btn btn-remove " v-if="cart.length" @click="showPopup()">结算</button>
+			<button  class="btn btn-remove " v-if="cart.length" @click="addOrder(totalPrice)">结算</button>
 		</div>
-
 	<transition name="fade">
 		<div class="popup" v-if="popupShow">
 			您选择了 <span class="count">{{ cart.length }}</span> 件商品
+			<br>
+			已加入订单
 		</div>
 	</transition>
 				
-	</div>
-
-	
-	</transition>
-			
-		
-	
+	</div>							
 </template>
 
 <style>
@@ -126,8 +119,9 @@ export default {
 	height: 10rem;
 	background: rgba(33,33,33,.9);
 	text-align: center;
-	line-height: 10rem;
 	border-radius: .4rem;
+	line-height: 2.4rem;
+	padding-top:3rem;
 	color: #fff;
 	z-index: 9999;
 }
@@ -159,6 +153,7 @@ export default {
 		position: absolute;
 		width: 100%;
 		z-index: 666;
+		background: #fff;
 	}
 	.header{
 		height: 5rem;
@@ -208,7 +203,7 @@ export default {
 	}
 
 
-	.cart .img-box {
+	.cart-item .img-box {
 		width:7rem;
 		height: 7rem;
 		float: left;
@@ -246,7 +241,7 @@ export default {
 		display: block;
 		width: 2rem;
 		height: 2rem;
-		background: url("../../static/img/icon.png");
+		background: url("/static/img/icon.png");
 		background-position: 0 -26rem;
 		background-size:200% auto;
 		float: right;

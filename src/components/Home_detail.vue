@@ -34,9 +34,6 @@ export default {
 				return this.item.price;
 			}
 		},
-		slideName_cart:function(){
-			return this.$store.state.slideName_cart;
-		}
 
 	},
 	
@@ -56,12 +53,6 @@ export default {
 		addItem: function(itemName){
 			this.$store.commit('addItem',itemName);
 		},
-		addSlideName: function(){
-			this.$store.commit('addSlideName');
-		},
-		removeSlideName: function(){
-			this.$store.commit('removeSlideName');
-		}
 	}
 
 
@@ -69,7 +60,6 @@ export default {
 </script>
 
 <template>
-	<transition :name="slideName_cart">
 	<div class="detail-item item">
 		<div class="btn-back">
 			<router-link to="/index">&lt;</router-link>
@@ -142,7 +132,6 @@ export default {
 			加入购物车</button>
 		</div>							
 	</div>
-	</transition>
 </template>
 
 <style>
