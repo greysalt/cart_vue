@@ -107,25 +107,25 @@ export default{
 		height: 2rem;
 		width: 2rem;
 		vertical-align: middle;
-		background: url('/cart_vue/static/img/icon2.png') no-repeat;
+		background: url('/cart_vue/static/img/icon.png') no-repeat;
 		background-size: 100% auto;
 		margin-right: .5rem;
 	}
 
 	.vip .menu .icon.icon-collection{
-		background-position:0 0;
+		background-position:0 -14rem;
 	}
 
 	.vip .menu .icon.icon-order{
-		background-position:0 -2rem;
+		background-position:0 -16rem;
 	}
 
 	.vip .menu .icon.icon-coupon{
-		background-position:0 -4rem;
+		background-position:0 -18rem;
 	}
 
 	.vip .menu .icon.icon-setup{
-		background-position:0 -6rem;
+		background-position:0 -20rem;
 	}
 
 	.vip .menu .order-count{
