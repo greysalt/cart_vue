@@ -67,7 +67,7 @@ export default{
 		width:10rem;
 		border-radius: 8rem;
 		margin:3rem auto 2rem;
-		background: url('/cart_vue/static/img/user.png') no-repeat;
+		background: url('../assets/img/user.png') no-repeat;
 		background-size:100% auto;
 	}
 
@@ -107,7 +107,7 @@ export default{
 		height: 2rem;
 		width: 2rem;
 		vertical-align: middle;
-		background: url('/cart_vue/static/img/icon.png') no-repeat;
+		background: url('../assets/img/icon.png') no-repeat;
 		background-size: 100% auto;
 		margin-right: .5rem;
 	}

@@ -47,7 +47,7 @@ export default {
 	display: block;
 	width:3rem;
 	height:3rem;
-	background: url('/cart_vue/static/img/icon.png') no-repeat;
+	background: url('../assets/img/icon.png') no-repeat;
 	background-size: 100% auto;
 	line-height: 3rem;
 }
