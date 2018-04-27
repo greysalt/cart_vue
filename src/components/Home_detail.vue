@@ -62,7 +62,7 @@ export default {
 <template>
 	<div class="detail-item item">
 		<div class="btn-back">
-			<router-link to="/index">&lt;</router-link>
+			<router-link to="/">&lt;</router-link>
 		</div>
 		<div class="gallery">
 			<img  class="img-responsive" :src="item.activeStyleUrl">
