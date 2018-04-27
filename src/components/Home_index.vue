@@ -31,7 +31,7 @@ export default {
 					<router-link :to="{name:'detail',query:{name:'iPad'}}" tag="div" class="item">
 							<a>
 							<div class="img-box first">
-								<img src="https://images.apple.com/cn/ipad-9.7/images/overview/performance_medium_2x.png">
+								<img src="https://store.storeimages.cdn-apple.com/8750/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/hero/ipad-hero-unselected-201803_GEO_CN?wid=490&amp;hei=674&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1522445752557">
 							</div>
 							<div class="name">
 								iPad
@@ -93,11 +93,6 @@ export default {
 	width: 12rem;
 	float: left;
 	text-align: center;
-}
-
-#index .img-box.first{
-	padding-top: 2rem;
-	overflow: hidden;
 }
 
 #index .img-box img{

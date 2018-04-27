@@ -54,7 +54,7 @@ const router = new Router({
     },
     {
       path: '*',
-      redirect:'/'
+      redirect:'/detail'
     }
   ]
 });

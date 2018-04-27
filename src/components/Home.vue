@@ -26,7 +26,7 @@ export default {
 </script>
 <template>
 	<transition :name="transName" v-on:after-enter="afterEnter">
-		<router-view clall="view-home"></router-view>
+		<router-view class="view-home"></router-view>
 	</transition>
 </template>
 <style>
